@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<!--
+	Fractal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Profile</title>
+        <link rel="stylesheet" href="assets/css/style.css" class="rel">
+        <link href="https://fonts.googleapis.com/css?family=League+Script|Raleway:600" rel="stylesheet">
+      
+      </head>
+
+<body class='signup-screen'>
+  <form action="/signup" method="post">
+    <div class='wrapper'>
+      <!-- show any messages that come back with authentication -->
+      <% if (message.length > 0) { %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+      <% } %>
+      <div class = content-wrapper-signup>
+      <input type="text" placeholder="Name" name="name-signup" id="name-signup" required/>
+      <input type="email" placeholder="Email" name="email" id="email-signup" required/>
+      <input type="password" placeholder="Password" name="password" id="password-signup" required/>
+      <input type="password" placeholder="Confirm Password" name="password-confirmation" id="password-confirmation" required/>
+      
+       </div>
+       <div class="space"></div>
+       <div class="navlinks"> <button class="form-btn-signup" type="submit"> Signup </button>
+        <a class="home-link" href="/">Home</a>
+        <a class="signup-link" href="/login">Login</a>
+      </div> 
+      </div>
+    </div>
+  </form>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

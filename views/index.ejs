@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class= "profile-html">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/css/style.css" class="rel">
+  <link href="https://fonts.googleapis.com/css?family=League+Script|Raleway:600" rel="stylesheet">
+
+</head>
+<body class = "profile-body">
+  
+
+  <div class="panels">
+    <div class="panel panel1">
+      
+    </div>
+    
+    <div class="panel panel6">
+       <p class = "league-openp2">Invest</p>
+       <p class = "league-closedp2">BitCoin Exchange Rate</p>
+       <!-- <img src = "../assets/images/click-here.png" class = "click-here-left"> -->
+     <p class = "ralewayblue">Please Log In To continue</p>
+    </div>
+
+    <div class = "panel panel3">
+        <p class = "league-openp4">Keep Track</p>
+        <p class = "league-closedp4">To-Do List</p>
+        <p></p>
+        <img src = "../assets/images/click-here.png" class = "click-here-mid">
+     <p class = "raleway"><a href="/login" class = "buttonsgreen">Log-In</a> 
+      &nbsp;&nbsp;&nbsp;
+      <a href="/signup" class = "buttonsgreen">Sign Up</a>
+    </p>
+    </div>
+
+    <div class="panel panel4">
+     <p class = "league-open">Communicate</p>
+     <p class = "league-closed">Chat App</p>
+     <!-- <img src = "../assets/images/click-here.png" class = "click-here"> -->
+     <p class = "ralewaypink">
+       Please log in to continue
+    </p>
+    </div>
+
+    <div class="panel panel5">
+    
+    </div>
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen(){
+      this.classList.toggle('open');
+    
+    }
+
+    function toggleActive(e){
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')){
+        this.classList.toggle('open-active');
+      }
+    }
+
+    function toggle(e){
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')){
+        this.classList.toggle('open-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    a.forEach(a => a.addEventListener('click', e.target.href));
+
+  </script>
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class= "profile-html">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="assets/css/style.css" class="rel">
+  <link href="https://fonts.googleapis.com/css?family=League+Script|Raleway:600" rel="stylesheet">
+
+</head>
+<body class = "profile-body">
+  
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p></p>
+      <p class="Menu">Menu</p>
+      <div class="navigation" id= "navmenu">
+        <a href="/profile" class="menu-item">Home</a>
+        <a href="/update-profile" class="menu-item">Update Profile</a>
+        <a href="/logOut" class="menu-item">Log Out</a>
+      </div>
+      
+   </div>
+    
+    <div class="panel panel2">
+      <meta></meta>
+     <p class = "league-openp2">Invest</p>
+     <p class = "league-closedp2">BitCoin Exchange Rate</p>
+     
+     <!-- <img src = "../assets/images/click-here.png" class = "click-here-left"> -->
+     <p class = "ralewayblue"><a href="/login" class = "buttonsblue">Convert</a></p>
+    </div>
+
+    <div class = "panel panel3">
+     <p class = "league-openp4">Keep Track</p>
+     <p class = "league-closedp4">To-Do List</p>
+     <p></p>
+     <img src = "../assets/images/click-here.png" class = "click-here-mid">
+     <p class = "raleway"><a href="/todos-index.ejs" class = "buttonsgreen">Tasks</a> 
+    </p>
+    </div>
+
+    <div class="panel panel4">
+     <p class = "league-open">Communicate</p>
+     <p class = "league-closed-chat">Chat App </p>
+     <!-- <img src = "../assets/images/click-here.png" class = "click-here"> -->
+     <p class = "ralewaypink">
+       <a href="../todos-index.ejs" class = "buttonspink">Chat Now</a>
+    </p>
+    </div>
+
+    <div class="panel panel5">
+    
+    </div>
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen(){
+      this.classList.toggle('open');
+    
+    }
+
+    function toggleActive(e){
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')){
+        this.classList.toggle('open-active');
+      }
+    }
+
+    function toggle(e){
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')){
+        this.classList.toggle('open-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    a.forEach(a => a.addEventListener('click', e.target.href));
+
+  </script>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <div class="todos-screen">
+      <div class="input-container">
+        <input class="todo-input" type="text" placeholder = "For your todos. Or reminders--or use it as a shopping list, anything you'd like!  The world is your Oyster..."  name="task-goes-here" id="todo_input" />
+        
+        <div id="btn" class="btn-container">
+          <span class="icon-lg ion-ios-plus-outline"></span>
+        </div>
+        
+      </div>
+
+      <div id="todos_container" class="todos-container cool-scroll-bar-17">
+        <% if (todos.length) { %>
+          <% for(var i = 0; i < todos.length; i++) {%>
+            <div id="<%= todos[i].id %>" class="todo-container <% if (todos[i].complete) { %> checked <% } %>">
+              <div class="remove">
+                <span class="ion-close-round icon-remove"></span>
+              </div>
+              <div data-complete="<%= todos[i].complete %>" class="todo">
+                <%= todos[i].task %>
+              </div>
+            </div>
+          <% } %>
+        <% } %>
+      </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

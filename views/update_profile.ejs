@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<!--
+	Fractal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Update Profile</title>
+        <link rel="stylesheet" href="assets/css/style.css" class="rel">
+        <link href="https://fonts.googleapis.com/css?family=League+Script|Raleway:600" rel="stylesheet">
+        
+      </head>
+  
+</head>
+
+<body class="profile-screen">
+  <nav class="navbar navbar-light bg-light">
+  
+    <div class="navbar-links">
+      <a class="navbar-link" href="/profile">Profile</a>
+      <a class="navbar-link" href="/logout">Logout</a>
+    </div>
+  
+  </nav>
+
+  <form method="post">
+    <div class='wrapper'>
+      <!-- show any messages that come back with authentication -->
+      <% if (message.length > 0) { %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+      <% } %>
+
+      <div class="content-wrapper-update">
+      <input required type="text" placeholder="name" name="name" id="name" value="<%= user.name %>" />
+      <input required type="email" placeholder="Email" name="email" id="email" value="<%= user.email %>" />
+      <input required type="password" placeholder="Password" name="password" id="password" />
+      <input type="password" placeholder="New Password" name="new_password" id="new-password" />
+      <input type="password" placeholder="Confirm Password" name="new_password_confirmation" id="new-password"
+      />
+      <button class="form-btn-update" type="submit"> Update Profile </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
